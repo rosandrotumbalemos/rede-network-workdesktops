@@ -1,0 +1,242 @@
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- TÍTULO -->
+    <mxCell id="titulo" value="Projeto de Rede — Loja da Ana | Computer Network — UniFECAF" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#1a3a5c;" vertex="1" parent="1">
+      <mxGeometry x="300" y="20" width="1054" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- INTERNET / WAN -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <mxCell id="box_wan" value="INTERNET / WAN" style="text;html=1;strokeColor=#1a3a5c;fillColor=#dbeafe;align=center;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1;fontColor=#1a3a5c;arcSize=8;" vertex="1" parent="1">
+      <mxGeometry x="620" y="80" width="160" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="internet" value="Internet" style="shape=mxgraph.cisco.sites.generic_building;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="667" y="100" width="66" height="55" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- MODEM -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <mxCell id="modem" value="MODEM&#xa;192.168.0.1&#xa;(WAN)" style="shape=mxgraph.cisco.routers.cable_modem;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="667" y="220" width="66" height="55" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- ROTEADOR / FIREWALL -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <mxCell id="roteador" value="ROTEADOR / FIREWALL&#xa;IP: 192.168.1.1&#xa;Gateway | DHCP | DNS&#xa;Firewall | VLANs" style="shape=mxgraph.cisco.routers.router;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="667" y="370" width="66" height="55" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- SWITCH GERENCIÁVEL -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <mxCell id="switch" value="SWITCH GERENCIÁVEL&#xa;24 portas&#xa;(VLANs 10, 20, 30)" style="shape=mxgraph.cisco.switches.workgroup_switch;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="667" y="530" width="66" height="55" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- VLAN 10 — PDV (verde) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <mxCell id="box_vlan10" value="VLAN 10 — PDV (Ponto de Venda)&#xa;Rede: 192.168.10.0/24" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=11;fontStyle=1;verticalAlign=top;arcSize=5;" vertex="1" parent="1">
+      <mxGeometry x="60" y="460" width="520" height="260" as="geometry" />
+    </mxCell>
+
+    <!-- Caixa 1 -->
+    <mxCell id="caixa1" value="Caixa Registradora 1&#xa;IP: 192.168.10.10&#xa;Fixo | Mask: /24&#xa;GW: 192.168.10.1" style="shape=mxgraph.cisco.computers_and_peripherals.pc;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;fontSize=9;" vertex="1" parent="1">
+      <mxGeometry x="80" y="520" width="55" height="55" as="geometry" />
+    </mxCell>
+
+    <!-- Caixa 2 -->
+    <mxCell id="caixa2" value="Caixa Registradora 2&#xa;IP: 192.168.10.11&#xa;Fixo | Mask: /24&#xa;GW: 192.168.10.1" style="shape=mxgraph.cisco.computers_and_peripherals.pc;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;fontSize=9;" vertex="1" parent="1">
+      <mxGeometry x="180" y="520" width="55" height="55" as="geometry" />
+    </mxCell>
+
+    <!-- Caixa 3 -->
+    <mxCell id="caixa3" value="Caixa Registradora 3&#xa;IP: 192.168.10.12&#xa;Fixo | Mask: /24&#xa;GW: 192.168.10.1" style="shape=mxgraph.cisco.computers_and_peripherals.pc;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;fontSize=9;" vertex="1" parent="1">
+      <mxGeometry x="280" y="520" width="55" height="55" as="geometry" />
+    </mxCell>
+
+    <!-- Maquininha -->
+    <mxCell id="maquininha" value="Maquininha de Cartão&#xa;IP: 192.168.10.13&#xa;Fixo | Mask: /24&#xa;GW: 192.168.10.1" style="shape=mxgraph.cisco.computers_and_peripherals.terminal;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;fontSize=9;" vertex="1" parent="1">
+      <mxGeometry x="380" y="520" width="55" height="55" as="geometry" />
+    </mxCell>
+
+    <!-- Impressora -->
+    <mxCell id="impressora" value="Impressora&#xa;IP: 192.168.10.14&#xa;Fixo | Mask: /24&#xa;GW: 192.168.10.1" style="shape=mxgraph.cisco.computers_and_peripherals.printer;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;fontSize=9;" vertex="1" parent="1">
+      <mxGeometry x="480" y="520" width="55" height="55" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- VLAN 20 — CFTV (amarelo) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <mxCell id="box_vlan20" value="VLAN 20 — CFTV (Segurança)&#xa;Rede: 192.168.20.0/24" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontSize=11;fontStyle=1;verticalAlign=top;arcSize=5;" vertex="1" parent="1">
+      <mxGeometry x="620" y="680" width="460" height="260" as="geometry" />
+    </mxCell>
+
+    <!-- Câmera 1 -->
+    <mxCell id="cam1" value="Camera IP 1&#xa;IP: 192.168.20.10&#xa;Fixo | PoE&#xa;GW: 192.168.20.1" style="shape=mxgraph.cisco.video.video_camera;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;fontSize=9;" vertex="1" parent="1">
+      <mxGeometry x="640" y="740" width="55" height="55" as="geometry" />
+    </mxCell>
+
+    <!-- Câmera 2 -->
+    <mxCell id="cam2" value="Camera IP 2&#xa;IP: 192.168.20.11&#xa;Fixo | PoE&#xa;GW: 192.168.20.1" style="shape=mxgraph.cisco.video.video_camera;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;fontSize=9;" vertex="1" parent="1">
+      <mxGeometry x="720" y="740" width="55" height="55" as="geometry" />
+    </mxCell>
+
+    <!-- Câmera 3 -->
+    <mxCell id="cam3" value="Camera IP 3&#xa;IP: 192.168.20.12&#xa;Fixo | PoE&#xa;GW: 192.168.20.1" style="shape=mxgraph.cisco.video.video_camera;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;fontSize=9;" vertex="1" parent="1">
+      <mxGeometry x="800" y="740" width="55" height="55" as="geometry" />
+    </mxCell>
+
+    <!-- Câmera 4 -->
+    <mxCell id="cam4" value="Camera IP 4&#xa;IP: 192.168.20.13&#xa;Fixo | PoE&#xa;GW: 192.168.20.1" style="shape=mxgraph.cisco.video.video_camera;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;fontSize=9;" vertex="1" parent="1">
+      <mxGeometry x="880" y="740" width="55" height="55" as="geometry" />
+    </mxCell>
+
+    <!-- Servidor -->
+    <mxCell id="servidor" value="SERVIDOR LOCAL&#xa;IP: 192.168.20.2&#xa;Fixo | Gigabit&#xa;Estoque + Gravacoes CFTV" style="shape=mxgraph.cisco.servers.standard_server;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;fontSize=9;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="980" y="740" width="66" height="66" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- VLAN 30 — GESTÃO (roxo) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <mxCell id="box_vlan30" value="VLAN 30 — Gestao&#xa;Rede: 192.168.30.0/24" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;fontSize=11;fontStyle=1;verticalAlign=top;arcSize=5;" vertex="1" parent="1">
+      <mxGeometry x="1120" y="460" width="460" height="260" as="geometry" />
+    </mxCell>
+
+    <!-- Access Point -->
+    <mxCell id="ap" value="ACCESS POINT (Wi-Fi)&#xa;IP: 192.168.1.3&#xa;Fixo | WPA3&#xa;SSID: Gestao-Loja" style="shape=mxgraph.cisco.wireless.access_point;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;fontSize=9;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="1300" y="510" width="66" height="66" as="geometry" />
+    </mxCell>
+
+    <!-- Tablet 1 -->
+    <mxCell id="tablet1" value="Tablet 1 (Ana)&#xa;IP: DHCP&#xa;192.168.30.101+&#xa;Wi-Fi / VLAN 30" style="shape=mxgraph.cisco.computers_and_peripherals.tablet;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;fontSize=9;" vertex="1" parent="1">
+      <mxGeometry x="1180" y="600" width="55" height="55" as="geometry" />
+    </mxCell>
+
+    <!-- Tablet 2 -->
+    <mxCell id="tablet2" value="Tablet 2 (Func.)&#xa;IP: DHCP&#xa;192.168.30.102+&#xa;Wi-Fi / VLAN 30" style="shape=mxgraph.cisco.computers_and_peripherals.tablet;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;fontSize=9;" vertex="1" parent="1">
+      <mxGeometry x="1440" y="600" width="55" height="55" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- CONEXÕES (Cabos) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+
+    <!-- Internet → Modem -->
+    <mxCell id="e_int_mod" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#1a3a5c;strokeWidth=2;" edge="1" source="internet" target="modem" parent="1">
+      <mxCell as="geometry" />
+    </mxCell>
+    <mxCell id="lbl_int_mod" value="WAN / Coaxial" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;fontColor=#1a3a5c;" vertex="1" connectable="0" parent="e_int_mod">
+      <mxGeometry x="-0.1" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+    </mxCell>
+
+    <!-- Modem → Roteador -->
+    <mxCell id="e_mod_rot" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#1a3a5c;strokeWidth=2;" edge="1" source="modem" target="roteador" parent="1">
+      <mxCell as="geometry" />
+    </mxCell>
+    <mxCell id="lbl_mod_rot" value="Ethernet Cat6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;fontColor=#1a3a5c;" vertex="1" connectable="0" parent="e_mod_rot">
+      <mxGeometry x="-0.1" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+    </mxCell>
+
+    <!-- Roteador → Switch -->
+    <mxCell id="e_rot_sw" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#1a3a5c;strokeWidth=3;" edge="1" source="roteador" target="switch" parent="1">
+      <mxCell as="geometry" />
+    </mxCell>
+    <mxCell id="lbl_rot_sw" value="Ethernet Gigabit (Trunk)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;fontColor=#1a3a5c;fontStyle=1;" vertex="1" connectable="0" parent="e_rot_sw">
+      <mxGeometry x="-0.1" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+    </mxCell>
+
+    <!-- Switch → Caixa1 -->
+    <mxCell id="e_sw_c1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#82b366;strokeWidth=2;" edge="1" source="switch" target="caixa1" parent="1">
+      <mxCell as="geometry" />
+    </mxCell>
+    <!-- Switch → Caixa2 -->
+    <mxCell id="e_sw_c2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#82b366;strokeWidth=2;" edge="1" source="switch" target="caixa2" parent="1">
+      <mxCell as="geometry" />
+    </mxCell>
+    <!-- Switch → Caixa3 -->
+    <mxCell id="e_sw_c3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#82b366;strokeWidth=2;" edge="1" source="switch" target="caixa3" parent="1">
+      <mxCell as="geometry" />
+    </mxCell>
+    <!-- Switch → Maquininha -->
+    <mxCell id="e_sw_maq" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#82b366;strokeWidth=2;" edge="1" source="switch" target="maquininha" parent="1">
+      <mxCell as="geometry" />
+    </mxCell>
+    <!-- Switch → Impressora -->
+    <mxCell id="e_sw_imp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#82b366;strokeWidth=2;" edge="1" source="switch" target="impressora" parent="1">
+      <mxCell as="geometry" />
+    </mxCell>
+
+    <!-- Switch → Câmera1 -->
+    <mxCell id="e_sw_cam1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#d6b656;strokeWidth=2;" edge="1" source="switch" target="cam1" parent="1">
+      <mxCell as="geometry" />
+    </mxCell>
+    <!-- Switch → Câmera2 -->
+    <mxCell id="e_sw_cam2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#d6b656;strokeWidth=2;" edge="1" source="switch" target="cam2" parent="1">
+      <mxCell as="geometry" />
+    </mxCell>
+    <!-- Switch → Câmera3 -->
+    <mxCell id="e_sw_cam3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#d6b656;strokeWidth=2;" edge="1" source="switch" target="cam3" parent="1">
+      <mxCell as="geometry" />
+    </mxCell>
+    <!-- Switch → Câmera4 -->
+    <mxCell id="e_sw_cam4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#d6b656;strokeWidth=2;" edge="1" source="switch" target="cam4" parent="1">
+      <mxCell as="geometry" />
+    </mxCell>
+    <!-- Switch → Servidor -->
+    <mxCell id="e_sw_srv" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#d79b00;strokeWidth=3;" edge="1" source="switch" target="servidor" parent="1">
+      <mxCell as="geometry" />
+    </mxCell>
+
+    <!-- Switch → Access Point -->
+    <mxCell id="e_sw_ap" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#9673a6;strokeWidth=2;" edge="1" source="switch" target="ap" parent="1">
+      <mxCell as="geometry" />
+    </mxCell>
+
+    <!-- Access Point → Tablet1 (Wi-Fi — linha tracejada) -->
+    <mxCell id="e_ap_t1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#9673a6;strokeWidth=2;dashed=1;" edge="1" source="ap" target="tablet1" parent="1">
+      <mxCell as="geometry" />
+    </mxCell>
+    <mxCell id="lbl_ap_t1" value="Wi-Fi (WLAN)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;fontColor=#9673a6;fontStyle=2;" vertex="1" connectable="0" parent="e_ap_t1">
+      <mxGeometry x="-0.1" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+    </mxCell>
+
+    <!-- Access Point → Tablet2 (Wi-Fi — linha tracejada) -->
+    <mxCell id="e_ap_t2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#9673a6;strokeWidth=2;dashed=1;" edge="1" source="ap" target="tablet2" parent="1">
+      <mxCell as="geometry" />
+    </mxCell>
+    <mxCell id="lbl_ap_t2" value="Wi-Fi (WLAN)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;fontColor=#9673a6;fontStyle=2;" vertex="1" connectable="0" parent="e_ap_t2">
+      <mxGeometry x="-0.1" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- LEGENDA -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <mxCell id="leg_titulo" value="LEGENDA" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fontColor=#1a3a5c;" vertex="1" parent="1">
+      <mxGeometry x="60" y="800" width="500" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="leg1" value="     VLAN 10 — PDV (Caixas, Maquininha, Impressora)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;align=left;" vertex="1" parent="1">
+      <mxGeometry x="60" y="825" width="420" height="28" as="geometry" />
+    </mxCell>
+    <mxCell id="leg2" value="     VLAN 20 — CFTV (Cameras IP + Servidor de Gravacao)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;align=left;" vertex="1" parent="1">
+      <mxGeometry x="60" y="860" width="420" height="28" as="geometry" />
+    </mxCell>
+    <mxCell id="leg3" value="     VLAN 30 — Gestao (Tablets via Wi-Fi)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;align=left;" vertex="1" parent="1">
+      <mxGeometry x="60" y="895" width="420" height="28" as="geometry" />
+    </mxCell>
+    <mxCell id="leg4" value="—————  Conexao Cabeada (Ethernet Cat6)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#1a3a5c;" vertex="1" parent="1">
+      <mxGeometry x="60" y="930" width="300" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="leg5" value="- - - -  Conexao Sem Fio (Wi-Fi / WLAN)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#9673a6;" vertex="1" parent="1">
+      <mxGeometry x="60" y="955" width="300" height="20" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>
